@@ -1,0 +1,26 @@
+{
+    "name": "TDD-JEST",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:lmedson/TDD-JEST.git",
+    "author": "medson mendes <medson-mbp@hotmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "nodemon src/server.js --ignore __tests__",
+        "pretest": "NODE_ENV=test sequelize db:migrate",
+        "test": "NODE_ENV=test jest",
+        "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
+    },
+    "dependencies": {
+        "dotenv": "^6.2.0",
+        "express": "^4.16.4",
+        "jest": "^24.1.0",
+        "pg": "^7.8.1",
+        "sequelize": "^4.42.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.10",
+        "sequelize-cli": "^5.4.0",
+        "sqlite3": "^4.0.6"
+    }
+}

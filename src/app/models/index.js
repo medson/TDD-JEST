@@ -13,7 +13,6 @@ const sequelize = new Sequelize(
     config.password,
     config
 );
-
 fs.readdirSync(__dirname)
     .filter(file => {
         return (

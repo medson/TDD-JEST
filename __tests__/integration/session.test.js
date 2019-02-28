@@ -9,7 +9,7 @@ describe("Authentication", () => {
         await truncate();
     });
 
-    it("should receive jwt token when authenticated with valid credentials", async () => {
+    it("should authenticate with valid credentials", async () => {
         const user = await User.create({
             name: "Medson",
             email: "medson11@gmail.com",
